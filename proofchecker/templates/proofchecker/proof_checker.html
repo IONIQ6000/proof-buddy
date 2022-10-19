@@ -1,9 +1,9 @@
 {% extends 'proofchecker/base.html' %} {% load static %} {% block content %}
-
+<div class="py-2 my-2 px-3 mx-3">
     <h2>
         <strong>ProofChecker v0.1: </strong>Validate your proof!</h2>
-    <div class="alert alert-warning">
-        <strong>WARNING:</strong> You cannot save proofs without signing in!
+    <div class="alert alert-danger ">
+        <strong>Proofs can't be saved without signing in</strong>
     </div>
     <hr>
 
@@ -287,4 +287,5 @@
     <script src="{% static 'js/proof_checker.js' %}"></script>
     <script src="{% static 'js/syntax.js' %}"></script>
     <script src="{% static 'js/valid_input.js' %}"></script>
+</div>
 {% endblock %}

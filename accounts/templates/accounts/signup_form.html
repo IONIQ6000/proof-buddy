@@ -4,15 +4,24 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="row">
-        <div class="col-md-8 col-sm-10 col-12">
-            <h2>Sign up as a {{ user_type }}</h2>
-            <form method="post" novalidate>
-                {% csrf_token %}
-                <input type="hidden" name="next" value="{{ next }}">
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-success">Sign up</button>
-            </form>
+    <div class=" py-4 my-4 d-flex justify-content-center mx-auto">
+
+        <div class="row">
+
+ <div class="d-flex justify-content-center mx-auto">
+            <div class="col-md-8 col-sm-10 col-12">
+
+                <h2>Sign up as a {{ user_type }}</h2>
+
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ next }}">
+                    {{ form|crispy }}
+                    <div class="d-flex justify-content-center mx-auto">
+                    <button type="submit" class="btn btn-success">Sign up</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 {% endblock %}
