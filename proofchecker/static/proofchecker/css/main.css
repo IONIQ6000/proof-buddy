@@ -157,5 +157,5 @@ body > footer {
     position: sticky;
     right: 15em;
     margin-left: 20em;
-
+    opacity: 85%;
 }

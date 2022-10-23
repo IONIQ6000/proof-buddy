@@ -6,35 +6,13 @@
   overflow-y : scroll;
 }
 
-#menu-option-buttons{
-  padding-top: 10px;
-  text-align: center;
-}
 
-#rules{
-  width:135px;
-}
 
-#help{
-  width:135px;
-}
-
-.rules-buttons{
-  text-align: center;
-  padding-bottom: 5px;
-}
-
-#TFL{
-  width:135px;
-}
-#FOL{
-  width:135px;
-}
 
 .right-nav-divider {
   border: none;
   height: 1px;
-  background-color: grey; 
+  background-color: grey;
   margin-right:10px;
 }
 
@@ -47,7 +25,7 @@
 
 #main-header{
   font-weight:bold;
-  font-size: 25px;
+  font-size: 22px;
   text-decoration: underline;
 }
 
@@ -122,4 +100,6 @@ table{
 
 
 
+.selectt {
 
+}
