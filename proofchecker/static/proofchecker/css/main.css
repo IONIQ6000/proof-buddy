@@ -1,58 +1,52 @@
 
 #main {
-  transition: margin-right .5s;
-  padding: 16px;
+    transition: margin-right .5s;
+    padding: 16px;
 }
-
 
 
 .sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
+    height: 100%;
+    width: 0;
+    position: fixed;
     background-color: #eeeeee;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 90px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+
+    transition: .2s;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+    color: #ff0000;
 }
 
 .sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 3em;
+    font-weight: bolder;
+
 }
-
-
-
-
-
-
 
 
 .alert {
-   display:inline-block;
+    display: inline-block;
 }
 
 nav {
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
 
@@ -75,7 +69,6 @@ body {
 }
 
 
-
 tt {
     font-family: "Lucida Console", "Menlo", "Monaco", "Courier",
     monospace;
@@ -85,8 +78,6 @@ tt {
     height: inherit;
     display: flex;
 }
-
-
 
 
 /* Premise and Conclusion Fields */
@@ -145,3 +136,26 @@ tt {
     margin-bottom: 5px;
 }
 
+
+.footer-wrapper {
+    min-height: calc(50vh - 30px);
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+    text-align: center;
+    height: 40px;
+    letter-spacing: 5px;
+    font-size: 8px;
+    color: #bbbbbb;
+}
+
+.drexel-logo {
+    width: 30em;
+    float: right;
+    position: sticky;
+    right: 15em;
+    margin-left: 20em;
+
+}

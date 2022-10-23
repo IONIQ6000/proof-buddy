@@ -39,13 +39,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.3/js/bootstrap-select.min.js"></script> {% endcomment %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
-    <title> {% block title %}Proof Checker{% endblock %} </title>
+    <title> {% block title %}Proof Buddy{% endblock %} </title>
     {% block head %}{% endblock %} {% block additionalFiles %}{% endblock %}
 </head>
 
 <body>
+
 <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
     {% include 'proofchecker/right_navigation_menu.html' %}
 </div>
 <div id="main">
@@ -53,10 +55,10 @@
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
         <a class="navbar-brand font-weight-bold btn btn-light mx-0 " href="{% url 'home' %}">
-            <img src="../../static/proofchecker/images/logo.png" width="35" height="auto"
+            <img src="../../../media/logos/logo.png" width="35" height="auto"
                  class="d-inline-block align-top"
                  alt="">
-            Proof Checker</a>
+            Proof Buddy</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -69,31 +71,31 @@
                     {% if  user.is_student %}
 
                         <li class="nav-item">
-                            <a href="{% url 'student_courses' %}" class="nav-link btn btn-light">Courses</a>
+                            <a href="{% url 'student_courses' %}" class=" btn btn-light">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'all_assignments' %}" class="nav-link btn btn-light">Assignments</a>
+                            <a href="{% url 'all_assignments' %}" class="btn btn-light">Assignments</a>
                         </li>
                     {% elif  user.is_instructor %}
                         <li class="nav-item">
-                            <a href="{% url 'student_courses' %}" class="nav-link btn btn-light">Courses</a>
+                            <a href="{% url 'student_courses' %}" class=" btn btn-light">Courses</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'all_assignments' %}" class="nav-link btn btn-light">Assignments</a>
+                            <a href="{% url 'all_assignments' %}" class=" btn btn-light">Assignments</a>
                         </li>
                     {% endif %}
                     <li class="nav-item">
-                        <a href="{% url 'all_proofs' %}" class="nav-link btn btn-light">All Proofs</a>
+                        <a href="{% url 'all_proofs' %}" class="btn btn-light">All Proofs</a>
                     </li>
                     {% if  user.is_instructor %}
                         <li class="nav-item">
-                            <a href="{% url 'student_proofs' %}" class="nav-link btn btn-light">Student Proofs</a>
+                            <a href="{% url 'student_proofs' %}" class="btn btn-light">Student Proofs</a>
                         </li>
                     {% endif %}
 
                 {% endif %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle btn btn-light" href="#" id="navbarDropdown" role="button"
+                    <a class="dropdown-toggle btn btn-light" href="#" id="navbarDropdown" role="button"
                        data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
                         Help
@@ -115,24 +117,17 @@
                     {% if  user.is_student %}
 
                         <li class="nav-item pr-4">
-
                             <a href="{% url 'student_profile' %}" class="nav-link">
-                                <div class="nav-icon" data-toggle="tooltip" data-placement="left"
-                                     title="Student Profile">
-                                    <i class="material-icons"
-                                       style=" font-size:35px;vertical-align: middle; line-height: 0;"> account_box</i>
-                                </div>
+                                <i class="material-icons"
+                                   style=" font-size:35px;vertical-align: middle; line-height: 0;"> account_box</i>
                             </a>
 
                         </li>
                     {% elif  user.is_instructor %}
                         <li class="nav-item pr-4">
                             <a href="{% url 'instructor_profile' %}" class="nav-link">
-                                <div class="nav-icon" data-toggle="tooltip" data-placement="left"
-                                     title="Instructor Profile">
-                                    <i class="material-icons"
-                                       style=" font-size:35px;vertical-align: middle; line-height: 0;"> account_box</i>
-                                </div>
+                                <i class="material-icons"
+                                   style=" font-size:35px;vertical-align: middle; line-height: 0;"> account_box</i>
                             </a>
                         </li>
 
@@ -161,37 +156,29 @@
 
                     </ul>
                 {% endif %}
-
         </div>
-
     </nav>
 
 
+    <div class="container">
+        {% if messages %} {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %} {% endif %}
+    </div>
+    {% block content %}{% endblock %}
 
 
+    <div class="buttons openbtn" onclick="openNav()">
+        <button class="btn btn-primary rounded-pill " id="sidebarCollapse">
+            Proof Rules
+        </button>
 
-
-<div class="container">
-    {% if messages %} {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">
-            {{ message }}
-        </div>
-    {% endfor %} {% endif %}
-</div>
-{% block content %}{% endblock %}
-
-
-
-
-
-<div class="buttons openbtn" onclick="openNav()">
-    <button class="btn btn-primary my-2 my-sm-0 rounded-pill" id="sidebarCollapse">
-        Proof Rules
-    </button>
+    </div>
 
 </div>
-
-</div>
+<footer>DEVELOPED BY DREXEL UNIVERSITY</footer>
 <script>
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
@@ -207,10 +194,9 @@
     setTimeout(() => {
         const box = document.getElementById('proof-badge-warning');
         box.style.display = 'none';
-
-
     }, 5000);
 </script>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

@@ -8,12 +8,12 @@
         <div class="content-section">
             <form method="POST">
                 {% csrf_token %}
-                <fieldset class="form-group">
-                    <legend class="border-bottom pb-2 mb-4 d-flex justify-content-center"><h3>Log In</h3> </legend>
+                <fieldset class="form-group ">
+                    <legend class="border-bottom pb-2 mb-4 d-flex justify-content-center "><h3>Log In </h3></legend>
                     {{ form|crispy }}
                 </fieldset>
                 <div class="form-group d-flex justify-content-center mx-auto">
-                    <button class="btn btn-outline-info " type="submit">Login</button>
+                    <button class="btn btn-info" type="submit">Login</button>
                 </div>
 
                 <div class="border-top pt-3 d-flex justify-content-center mx-auto">
