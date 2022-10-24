@@ -1,19 +1,9 @@
 
 .full-menu{
   height:100%;
-  margin-left: 25px;
+  margin-left: 15px;
   overflow: hidden;
   overflow-y : scroll;
-}
-
-
-
-
-.right-nav-divider {
-  border: none;
-  height: 1px;
-  background-color: grey;
-  margin-right:10px;
 }
 
 
