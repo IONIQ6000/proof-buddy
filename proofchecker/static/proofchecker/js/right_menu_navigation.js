@@ -11,9 +11,8 @@ function setSecondaryButton(menuName) {
 }
 
 function setPrimaryOutlineButton(menuName) {
-    document.getElementById(menuName).classList.remove('btn-primary');
-    document.getElementById(menuName).classList.add('btn-secondary');
-
+    document.getElementById(menuName).classList.remove('btn-secondary');
+    document.getElementById(menuName).classList.add('btn-primary');
     document.getElementById(`${menuName}-rules`).style.display = "block";
 }
 
@@ -44,6 +43,7 @@ window.onload = function () {
 };
 
 function showInformation(e) {
+
     if (e == "rules") {
         setPrimaryButton("rules")
         setSecondaryButton("help")
@@ -66,6 +66,4 @@ function showRules(e) {
         localStorage.setItem("rule-selection", "FOL");
     }
 }
-
-
 

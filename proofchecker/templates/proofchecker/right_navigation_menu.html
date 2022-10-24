@@ -31,98 +31,127 @@
                 </div>
                 <div class="collapse mt-4" id="collapseExample">
                     <div class="card card-body">
+                        <div class="d-flex justify-content-center mb-2 ">
+                            <button id="rules" type="button" class="btn btn-primary btn-sm mx-2"
+                                    onClick="toggleAll(this)" style="font-size: 10px">Select All
+                            </button>
+                            <button id="help" type="button" class="btn btn-secondary btn-sm mx-2"
+                                    style="font-size: 10px">Select None
+                            </button>
+                        </div>
                         <div class="font-weight-bolder">Basic TFL Rules:</div>
 
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="Conjunction" id="defaultCheck1"
-                                   checked>
-                            <label class="form-check-label" for="defaultCheck1">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Conjunction" id="customSwitch1" checked>
+                            <label class="custom-control-label" for="customSwitch1">
                                 Conjunction
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="Disjunction" id="defaultCheck2"
-                                   checked>
-                            <label class="form-check-label" for="defaultCheck2">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Disjunction" id="customSwitch2" checked>
+                            <label class="custom-control-label" for="customSwitch2">
                                 Disjunction
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="Negation" id="defaultCheck3"
-                                   checked>
-                            <label class="form-check-label" for="defaultCheck3">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Negation" id="customSwitch3" checked>
+                            <label class="custom-control-label" for="customSwitch3">
                                 Negation
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck4" checked>
-                            <label class="form-check-label" for="defaultCheck4">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Implication" id="customSwitch4" checked>
+                            <label class="custom-control-label" for="customSwitch4">
                                 Implication
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck5" checked>
-                            <label class="form-check-label" for="defaultCheck5">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Biconditional" id="customSwitch5" checked>
+                            <label class="custom-control-label" for="customSwitch5">
                                 Biconditional
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck6" checked>
-                            <label class="form-check-label" for="defaultCheck6">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Indirect-Proof" id="customSwitch6" checked>
+                            <label class="custom-control-label" for="customSwitch6">
                                 Indirect Proof
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck7" checked>
-                            <label class="form-check-label" for="defaultCheck7">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Explosion" id="customSwitch7" checked>
+                            <label class="custom-control-label" for="customSwitch7">
                                 Explosion
                             </label>
                         </div>
 
+
                         <div class="font-weight-bolder mt-1">Derived TFL Rules:</div>
 
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck8" checked>
-                            <label class="form-check-label" for="defaultCheck8">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Reiteration" id="customSwitch8" checked>
+                            <label class="custom-control-label" for="customSwitch8">
                                 Reiteration
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck9" checked>
-                            <label class="form-check-label" for="defaultCheck9">
+
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Double-Negation-Elimination" id="customSwitch9" checked>
+                            <label class="custom-control-label" for="customSwitch9">
                                 Double Negation Elimination
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck10" checked>
-                            <label class="form-check-label" for="defaultCheck10">
+
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Disjunctive-Syllogism" id="customSwitch10" checked>
+                            <label class="custom-control-label" for="customSwitch10">
                                 Disjunctive Syllogism
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck11" checked>
-                            <label class="form-check-label" for="defaultCheck11">
+
+
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Modus-Tollens" id="customSwitch11" checked>
+                            <label class="custom-control-label" for="customSwitch11">
                                 Modus Tollens
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck12" checked>
-                            <label class="form-check-label" for="defaultCheck12">
+
+
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="Law-of-Excluded-Middle" id="customSwitch12" checked>
+                            <label class="custom-control-label" for="customSwitch12">
                                 Law of Excluded Middle
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input btn" type="checkbox" value="" id="defaultCheck13" checked>
-                            <label class="form-check-label" for="defaultCheck13">
+
+
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                                   data-trigger="De-Morgan-Rules" id="customSwitch13" checked>
+                            <label class="custom-control-label" for="customSwitch13">
                                 De Morgan Rules
                             </label>
                         </div>
 
+
                     </div>
+
                 </div>
                 <br>
                 <div id="main-header">Basic TFL Rules:</div>
-                <div class="Conjunction">
+                <div id="Conjunction">
                     <div id="item-name">Conjunction:</div>
                     <img src="{% static 'proofchecker/images/and_intro.png' %}" alt="Conjunction Introduction"
                          class="py-3 px-1">
@@ -131,65 +160,81 @@
                     <img src="{% static 'proofchecker/images/and_elim2.png' %}" alt="Conjunction Elimination 2"
                          class="py-3 px-1">
                 </div>
-
-                <div id="item-name">Disjunction:</div>
-                <img src="{% static 'proofchecker/images/or_intro1.png' %}" alt="Disjunction Introduction 1"
-                     class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/or_intro2.png' %}" alt="Disjunction Introduction 2"
-                     class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/or_elim.png' %}" alt="Disjunction Elimination"
-                     class="py-3 px-1">
-
-                <div id="item-name">Negation:</div>
-                <img src="{% static 'proofchecker/images/not_intro.png' %}" alt="Negation Introduction"
-                     class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/not_elim.png' %}" alt="Negation Elimination" class="py-3 px-1">
-
-                <div id="item-name">Implication:</div>
-                <img src="{% static 'proofchecker/images/implies_intro.png' %}" alt="Implication Introduction"
-                     class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/implies_elim.png' %}" alt="Implication Elimination"
-                     class="py-3 px-1">
-
-                <div id="item-name">Biconditional:</div>
-                <img src="{% static 'proofchecker/images/iff_intro.png' %}" alt="Biconditional Introduction"
-                     class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/iff_elim1.png' %}" alt="Biconditional Elimination 1"
-                     class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/iff_elim2.png' %}" alt="Biconditional Elimination 2"
-                     class="py-3 px-1">
-
-                <div id="item-name">Indirect Proof:</div>
-                <img src="{% static 'proofchecker/images/indirect_proof.png' %}" alt="Indirect Proof" class="py-3 px-1">
-
-                <div id="item-name">Explosion:</div>
-                <img src="{% static 'proofchecker/images/explosion.png' %}" alt="Explosion" class="py-3 px-1">
-
+                <div id="Disjunction">
+                    <div id="item-name">Disjunction:</div>
+                    <img src="{% static 'proofchecker/images/or_intro1.png' %}" alt="Disjunction Introduction 1"
+                         class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/or_intro2.png' %}" alt="Disjunction Introduction 2"
+                         class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/or_elim.png' %}" alt="Disjunction Elimination"
+                         class="py-3 px-1">
+                </div>
+                <div id="Negation">
+                    <div id="item-name">Negation:</div>
+                    <img src="{% static 'proofchecker/images/not_intro.png' %}" alt="Negation Introduction"
+                         class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/not_elim.png' %}" alt="Negation Elimination"
+                         class="py-3 px-1">
+                </div>
+                <div id="Implication">
+                    <div id="item-name">Implication:</div>
+                    <img src="{% static 'proofchecker/images/implies_intro.png' %}" alt="Implication Introduction"
+                         class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/implies_elim.png' %}" alt="Implication Elimination"
+                         class="py-3 px-1">
+                </div>
+                <div id="Biconditional">
+                    <div id="item-name">Biconditional:</div>
+                    <img src="{% static 'proofchecker/images/iff_intro.png' %}" alt="Biconditional Introduction"
+                         class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/iff_elim1.png' %}" alt="Biconditional Elimination 1"
+                         class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/iff_elim2.png' %}" alt="Biconditional Elimination 2"
+                         class="py-3 px-1">
+                </div>
+                <div id="Indirect-Proof">
+                    <div id="item-name">Indirect Proof:</div>
+                    <img src="{% static 'proofchecker/images/indirect_proof.png' %}" alt="Indirect Proof"
+                         class="py-3 px-1">
+                </div>
+                <div id="Explosion">
+                    <div id="item-name">Explosion:</div>
+                    <img src="{% static 'proofchecker/images/explosion.png' %}" alt="Explosion" class="py-3 px-1">
+                </div>
 
                 <div id="main-header">Derived TFL Rules:</div>
-
-                <div id="item-name">Reiteration:</div>
-                <img src="{% static 'proofchecker/images/reiteration.png' %}" alt="Reiteration" class="py-3 px-1">
-
-                <div id="item-name">Double Negation Elimination:</div>
-                <img src="{% static 'proofchecker/images/dne.png' %}" alt="Double Negation Elimination"
-                     class="py-3 px-1">
-
-                <div id="item-name">Disjunctive Syllogism:</div>
-                <img src="{% static 'proofchecker/images/ds1.png' %}" alt="Disjunctive Syllogism 1" class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/ds2.png' %}" alt="Disjunctive Syllogism 2" class="py-3 px-1">
-
-                <div id="item-name">Modus Tollens:</div>
-                <img src="{% static 'proofchecker/images/mt.png' %}" alt="Modus Tollens" class="py-3 px-1">
-
-                <div id="item-name">Law of Excluded Middle:</div>
-                <img src="{% static 'proofchecker/images/lem.png' %}" alt="Law of Excluded Middle" class="py-3 px-1">
-
-                <div id="item-name">De Morgan Rules:</div>
-                <img src="{% static 'proofchecker/images/dem1.png' %}" alt="De Morgan Rule 1" class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/dem2.png' %}" alt="De Morgan Rule 2" class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/dem3.png' %}" alt="De Morgan Rule 3" class="py-3 px-1">
-                <img src="{% static 'proofchecker/images/dem4.png' %}" alt="De Morgan Rule 4" class="py-3 px-1">
+                <div id="Reiteration">
+                    <div id="item-name">Reiteration:</div>
+                    <img src="{% static 'proofchecker/images/reiteration.png' %}" alt="Reiteration" class="py-3 px-1">
+                </div>
+                <div id="Double-Negation-Elimination">
+                    <div id="item-name">Double Negation Elimination:</div>
+                    <img src="{% static 'proofchecker/images/dne.png' %}" alt="Double Negation Elimination"
+                         class="py-3 px-1">
+                </div>
+                <div id="Disjunctive-Syllogism">
+                    <div id="item-name">Disjunctive Syllogism:</div>
+                    <img src="{% static 'proofchecker/images/ds1.png' %}" alt="Disjunctive Syllogism 1"
+                         class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/ds2.png' %}" alt="Disjunctive Syllogism 2"
+                         class="py-3 px-1">
+                </div>
+                <div id="Modus-Tollens">
+                    <div id="item-name">Modus Tollens:</div>
+                    <img src="{% static 'proofchecker/images/mt.png' %}" alt="Modus Tollens" class="py-3 px-1">
+                </div>
+                <div id="Law-of-Excluded-Middle">
+                    <div id="item-name">Law of Excluded Middle:</div>
+                    <img src="{% static 'proofchecker/images/lem.png' %}" alt="Law of Excluded Middle"
+                         class="py-3 px-1">
+                </div>
+                <div id="De-Morgan-Rules">
+                    <div id="item-name">De Morgan Rules:</div>
+                    <img src="{% static 'proofchecker/images/dem1.png' %}" alt="De Morgan Rule 1" class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/dem2.png' %}" alt="De Morgan Rule 2" class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/dem3.png' %}" alt="De Morgan Rule 3" class="py-3 px-1">
+                    <img src="{% static 'proofchecker/images/dem4.png' %}" alt="De Morgan Rule 4" class="py-3 px-1">
+                </div>
             </div>
 
             <div id="FOL-rules">
@@ -355,11 +400,15 @@
 </div>
 
 <script type="text/javascript">
-            $(document).ready(function() {
-                $('input[type="checkbox"]').click(function() {
-                    let inputValue = $(this).attr("value");
-                    $("." + inputValue).toggle();
-
-                });
-            });
-        </script>
+    $(function () {
+        $('.hidden').hide();
+        $('.trigger').change(function () {
+            let hiddenId = $(this).attr("data-trigger");
+            if ($(this).is(':checked')) {
+                $("#" + hiddenId).show();
+            } else {
+                $("#" + hiddenId).hide();
+            }
+        });
+    });
+</script>
