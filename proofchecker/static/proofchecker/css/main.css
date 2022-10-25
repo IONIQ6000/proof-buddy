@@ -68,6 +68,9 @@ body {
     font-family: sans-serif;
 }
 
+#proof-table {
+  width: fit-content;
+}
 
 tt {
     font-family: "Lucida Console", "Menlo", "Monaco", "Courier",

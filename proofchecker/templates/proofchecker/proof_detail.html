@@ -1,8 +1,8 @@
 {% extends 'proofchecker/base.html' %}
 {% load static %}
 {% block content %}
-
-    <a href="{% url 'all_proofs' %}" class="btn btn-primary mt-3"> Back to all proofs </a>
+<div class="py-5 my-5 px-5 mx-5">
+    <a href="{% url 'all_proofs' %}" class="btn btn-primary "> Back to all proofs </a>
 
     <hr>
 
@@ -50,7 +50,7 @@
     {% endif %}
     <a href="{% url 'update_proof' object.id %}" class="card-link btn btn-primary"> Edit </a>
     {#<a href="{% url 'delete_proof' object.id %}" class="card-link btn btn-secondary"> Delete </a>#}
-
+</div>
 {% endblock %}
 
 {% block js_block %}

@@ -33,68 +33,74 @@
             <div id="valid-premise-div"></div>
             <div id="valid-conclusion-div"></div>
 
+            <a class="btn btn-secondary btn-sm" data-toggle="collapse" href="#collapseExample" role="button"
+               aria-expanded="false" aria-controls="collapseExample" style="font-size: 12px">
+                Table Button Info
+            </a>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="d-flex flex-row" style="font-size: 12px">
 
-            <div class="d-flex flex-row" style="font-size: 11px">
+                        <div class="pr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                 class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"></path>
+                            </svg>
+                            Add a new line to the proof
 
-                <div class="pr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
-                         class="bi bi-plus-square-fill" viewBox="0 0 16 16">
-                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"></path>
-                    </svg>
-                    Add a new line to the proof
+                        </div>
+                        <div class="pr-2">
 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey"
+                                 class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                                <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"></path>
+                            </svg>
+                            Pull the current line out of the subproof
+                        </div>
+
+                        <div class="pr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="blue"
+                                 class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"></path>
+                            </svg>
+                            Push the current line into a subproof
+                        </div>
+
+
+                        <div class="pr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red"
+                                 class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"
+                                />
+                            </svg>
+                            Delete line from the proof
+                        </div>
+
+                    </div>
+                    <div class="d-flex flex-row pt-2" style="font-size: 12px">
+                        <div class="pr-1">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 class="bi bi-caret-up-fill" viewBox="0 0 16 16"
+                                 margin="0px">
+                                <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"></path>
+                            </svg>
+                            Swaps the current row with the one above if they're sequential or pushes current row up into
+                            the
+                            previous row's level.
+                        </div>
+                        <div class="pr-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                 class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                                />
+                            </svg>
+                            Swaps the current row with the one below it if they're sequential or pushes current row down
+                            into the next row's level.
+                        </div>
+                    </div>
                 </div>
-                <div class="pr-2">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey"
-                         class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
-                        <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z"></path>
-                    </svg>
-                    Pull the current line out of the subproof
-                </div>
-
-                <div class="pr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="blue"
-                         class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
-                        <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"></path>
-                    </svg>
-                    Push the current line into a subproof
-                </div>
-
-
-                <div class="pr-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red"
-                         class="bi bi-x-square-fill" viewBox="0 0 16 16">
-                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"
-                        />
-                    </svg>
-                    Delete line from the proof
-                </div>
-
             </div>
-            <div class="d-flex flex-row pt-2" style="font-size: 11px">
-                <div class="pr-1">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                         class="bi bi-caret-up-fill" viewBox="0 0 16 16"
-                         margin="0px">
-                        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"></path>
-                    </svg>
-                    Swaps the current row with the one above if they're sequential or pushes current row up into
-                    the
-                    previous row's level.
-                </div>
-                <div class="pr-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                         class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
-                        />
-                    </svg>
-                    Swaps the current row with the one below it if they're sequential or pushes current row down
-                    into the next row's level.
-                </div>
-            </div>
-
             {% if formset %} {{ formset.management_form }}
                 <!-- Display lines -->
                 <table class="table table-striped table-bordered table-hover table-sm table-responsive"
@@ -260,7 +266,7 @@
                                     name="proofline_set-__prefix__-move_up-btn"
                                     id="id_proofline_set-__prefix__-move_up-btn"
                                     value="Move Up"
-                                    style="padding-bottom:0px;padding-top:0px;margin-bottom:-10px;margin-top:-15px"
+                                    style="padding-bottom:0px;padding-top:0px;margin-bottom:-15px;margin-top:-15px"
                                     onclick="move_up(this)">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                      class="bi bi-caret-up-fill" viewBox="0 0 16 16"

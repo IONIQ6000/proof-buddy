@@ -39,7 +39,7 @@
             <hr> {% if formset %} {{ formset.management_form }}
 
             <!-- Display lines -->
-             <div class="d-flex flex-row">
+            <div class="d-flex flex-row">
                 <div class="pr-3 py-2">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
@@ -71,7 +71,7 @@
                     Delete line
                 </div>
             </div>
-            <table class="table table-hover table-sm table-responsive" id="proof-table">
+            <table class="table table-hover table-sm table-responsive table-borderless float-left" id="proof-table" style="width: fit-content;">
                 <thead id="column-titles">
                 <tr class="font-weight-bold">
 
@@ -177,7 +177,7 @@
                         </button>
                     </td>
                     <td>
-                        <button class="create_subproof btn btn-light" type="button"
+                        <div class="create_subproof btn btn-light" type="button"
                                 name="proofline_set-__prefix__-create_subproof-btn"
                                 id="id_proofline_set-__prefix__-create_subproof-btn"
                                 value="Create Subproof" onclick="create_subproof(this)">
@@ -185,7 +185,7 @@
                                  class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
                                 <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"></path>
                             </svg>
-                        </button>
+                        </div>
 
                     </td>
                     <td>
@@ -209,13 +209,13 @@
             <hr>
 
 
-            <div class="row">
+
                 <div class="col-4 col-sm-4">
                     <button name="check_proof" type="submit" class="btn btn-primary mb-3">Check Proof</button>
                 </div>
                 Number of Steps:&nbsp
                 <div id="line_counter">0</div>
-            </div>
+
 
             <hr>
             <!-- Display validation errors from form fields-->
