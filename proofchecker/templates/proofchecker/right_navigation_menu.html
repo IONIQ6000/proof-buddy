@@ -32,11 +32,11 @@
                 <div class="collapse mt-4" id="collapseTFLRules">
                     <div class="card card-body">
                         <div class="d-flex justify-content-center mb-2 ">
-                            <button id="rules" type="button" class="btn btn-primary btn-sm mx-2"
-                                    onClick="toggleAll(this)" style="font-size: 10px">Select All
+                            <button id="rules" type="button" class="btn btn-primary btn-sm mx-2 "
+                                    onclick="selectAllTFL()" style="font-size: 10px">Select All
                             </button>
-                            <button id="help" type="button" class="btn btn-secondary btn-sm mx-2"
-                                    style="font-size: 10px">Select None
+                            <button id="uncheck" type="button" class="btn btn-secondary btn-sm mx-2"
+                                    onclick="deSelectAllTFL()" style="font-size: 10px">Select None
                             </button>
                         </div>
                         <div class="font-weight-bolder">Basic TFL Rules:</div>
@@ -250,30 +250,30 @@
                     <div class="card card-body">
                         <div class="d-flex justify-content-center mb-2 ">
                             <button id="rules" type="button" class="btn btn-primary btn-sm mx-2"
-                                    onClick="toggleAll(this)" style="font-size: 10px">Select All
+                                    onclick="selectAllFOL()" style="font-size: 10px">Select All
                             </button>
                             <button id="help" type="button" class="btn btn-secondary btn-sm mx-2"
-                                    style="font-size: 10px">Select None
+                                    onclick="deSelectAllFOL()" style="font-size: 10px">Select None
                             </button>
                         </div>
                         <div class="font-weight-bolder">Basic FOL Rules:</div>
 
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                            <input type="checkbox" class="custom-control-input trigger" name="FOL-check"
                                    data-trigger="Existential" id="customSwitch14" checked>
                             <label class="custom-control-label" for="customSwitch14">
                                 Existential
                             </label>
                         </div>
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                            <input type="checkbox" class="custom-control-input trigger" name="FOL-check"
                                    data-trigger="Universal" id="customSwitch15" checked>
                             <label class="custom-control-label" for="customSwitch15">
                                 Universal
                             </label>
                         </div>
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                            <input type="checkbox" class="custom-control-input trigger" name="FOL-check"
                                    data-trigger="Equality" id="customSwitch16" checked>
                             <label class="custom-control-label" for="customSwitch16">
                                 Equality
@@ -284,7 +284,7 @@
                         <div class="font-weight-bolder mt-1">Derived FOL Rules:</div>
 
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input trigger" name="TFL-check"
+                            <input type="checkbox" class="custom-control-input trigger" name="FOL-check"
                                    data-trigger="Conversion-of-Quantifiers" id="customSwitch17" checked>
                             <label class="custom-control-label" for="customSwitch17">
                                 Conversion of Quantifiers
@@ -459,7 +459,10 @@
     </div>
 </div>
 
+
 <script type="text/javascript">
+
+
     $(function () {
         $('.hidden').hide();
         $('.trigger').change(function () {
@@ -471,4 +474,65 @@
             }
         });
     });
+
+</script>
+
+<script type="text/javascript">
+    function selectAllTFL() {
+        const element = document.getElementsByName('TFL-check');
+        for (let position = 0; position < element.length; position++) {
+            if (element[position].type === 'checkbox')
+                element[position].checked = true;
+            let hiddenId = $(element[position]).attr("data-trigger");
+            if ($(element[position]).is(':checked')) {
+                $("#" + hiddenId).show();
+            } else {
+                $("#" + hiddenId).hide();
+            }
+        }
+    }
+
+    function deSelectAllTFL() {
+        const element = document.getElementsByName('TFL-check');
+        for (let position = 0; position < element.length; position++) {
+            if (element[position].type === 'checkbox')
+                element[position].checked = false;
+            let hiddenId = $(element[position]).attr("data-trigger");
+            if ($(element[position]).is(':checked')) {
+                $("#" + hiddenId).show();
+            } else {
+                $("#" + hiddenId).hide();
+            }
+
+        }
+    }
+
+    function selectAllFOL() {
+        const element = document.getElementsByName('FOL-check');
+        for (let position = 0; position < element.length; position++) {
+            if (element[position].type === 'checkbox')
+                element[position].checked = true;
+            let hiddenId = $(element[position]).attr("data-trigger");
+            if ($(element[position]).is(':checked')) {
+                $("#" + hiddenId).show();
+            } else {
+                $("#" + hiddenId).hide();
+            }
+        }
+    }
+
+    function deSelectAllFOL() {
+        const element = document.getElementsByName('FOL-check');
+        for (let position = 0; position < element.length; position++) {
+            if (element[position].type === 'checkbox')
+                element[position].checked = false;
+            let hiddenId = $(element[position]).attr("data-trigger");
+            if ($(element[position]).is(':checked')) {
+                $("#" + hiddenId).show();
+            } else {
+                $("#" + hiddenId).hide();
+            }
+
+        }
+    }
 </script>
